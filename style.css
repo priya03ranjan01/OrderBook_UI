@@ -25,8 +25,8 @@ header.navbar {
   display: flex;   
   align-items: center;
   justify-content: space-between;
-  position: relative;
-  padding: 2%;
+  padding: 10px;
+  vertical-align:center;
 
 }
 
@@ -54,7 +54,16 @@ a {
       background-color: #ffff44;
     }
 
+    .navbar_right_items{
+      background-color: #ffff44;
+      padding: 5px 10px;
+      vertical-align:center;
+
+    }
     
+    .enter_user input{
+
+    }
     .side_menu{
       background-color:#3f3f3f;
        height:100vh;
