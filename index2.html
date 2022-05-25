@@ -12,7 +12,7 @@
 
 <body>
     <!-- navbar -->
-    <div class="navbar">
+    <header class="navbar">
         <div class="navbar_items">
             <nav class="navbar_left_items">
                 <ul>
@@ -31,14 +31,53 @@
                 </div> -->
             </div>
         </div>
+    </header>
+
+    
+    <div class="display_screen">
+        <div class="side_menu">
+
+            <form action="/action_page.php"></form>
+            <ul class="menu_items">
+                <li class="item_1">
+                    <select class="symbol" required>
+                        <option value="" disabled selected hidden>Select a Symbol</option>
+                        <option value="volvo">TCS</option>
+                        <option value="saab">INFY</option>
+                    </select>
+                </li>
+                <li class="item_2">
+                    <button class="view_order_btn" onclick="submitTryit(1)"><i class="fa fa-eye"
+                            style="font-size:14px;color:#2f2f2f;"></i>
+                        View Order Book
+                    </button>
+
+                </li>
+                <li class="item_3">
+                    <a href="javascript:void(0);" onclick="openMenu()" class="place_order" title="">
+                        <i class="fa fa-box-dollar" style="font-size:20px;color:#ffffff;"></i>
+                        Place Order
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                    <i class="fa fa-angle-down"></i>
+
+                    <div class="place_order_open_menu">
+                        <span class="place_order_open_menu_inputs">
+                            </span>
+
+                    </div>
+        </div>
+        </li>
+        </ul>
+    </div>
+    </form>
+
+    <div class="empty_screen">
+    </div>
+
     </div>
 
 
-    <div class="display_screen">
-        <div class="side_menu">
-        </div></div>
-        <div class="empty_screen">
-        </div>
 
 </body>
 
