@@ -2,80 +2,82 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Trading Engine UI</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/4a04772a53.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css" />
+  <title>Trading Engine UI</title>
+  
 </head>
 
 <body>
-    <!-- navbar -->
-    <header class="navbar">
-        <div class="navbar_items">
-            <nav class="navbar_left_items">
-                <ul>
-                    <li><a class="order_book" href="order_book.html">Order Book</a></li>
-                    <li><a class="order_book" href="order_book.html">Order History</a></li>
-                </ul>
-            </nav>
-            <div class="navbar_right_items">
-                <div class="enter_user">
-                    <input type="text" placeholder="Enter User ID" required />
-                    <i class="fa fa-user" style="font-size:35px;color:#2f2f2f;"></i>
-                </div>
-                <!-- <div class="entered_user">
-                    <h5>User ID: xxxxx</h5>
-                    <img src="user.png" alt="user" />
-                </div> -->
-            </div>
-        </div>
-    </header>
+  <nav class="navbar">
+    <div class="items">
+      <div class="navbar_left_items">
+        <ul>
+          <input type="checkbox" id="checkbox_toggle" />
+          <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+          <div class="collapse">
+            <li><a class="order_book" href="order_book.html">Order Book</a></li>
 
-    
-    <div class="display_screen">
-        <div class="side_menu">
-
-            <form action="/action_page.php"></form>
-            <ul class="menu_items">
-                <li class="item_1">
-                    <select class="symbol" required>
-                        <option value="" disabled selected hidden>Select a Symbol</option>
-                        <option value="volvo">TCS</option>
-                        <option value="saab">INFY</option>
-                    </select>
-                </li>
-                <li class="item_2">
-                    <button class="view_order_btn" onclick="submitTryit(1)"><i class="fa fa-eye"
-                            style="font-size:14px;color:#2f2f2f;"></i>
-                        View Order Book
-                    </button>
-
-                </li>
-                <li class="item_3">
-                    <a href="javascript:void(0);" onclick="openMenu()" class="place_order" title="">
-                        <i class="fa fa-box-dollar" style="font-size:20px;color:#ffffff;"></i>
-                        Place Order
-                        <i class="fa fa-angle-right"></i>
-                    </a>
-                    <i class="fa fa-angle-down"></i>
-
-                    <div class="place_order_open_menu">
-                        <span class="place_order_open_menu_inputs">
-                            </span>
-
-                    </div>
-        </div>
-        </li>
+            <li><a class="order_history" href="order_history.html">Order History</a></li>
+          </div>
         </ul>
-    </div>
-    </form>
+      </div>
+      <div class="navbar_right_items">
+        <ul>
 
-    <div class="empty_screen">
-    </div>
 
+
+          <div class="enter_user">
+            <li><input type="text" placeholder="Enter User ID" required /></li>
+            <li><i class="fa fa-user" style="font-size:40px;color:rgb(75, 75, 75);"></i></li>
+
+          </div>
+        </ul>
+      </div>
     </div>
+  </nav>
+
+  <div class="display_screen">
+    <div class="side_menu">
+
+      <!-- <form action="/action_page.php"></form> -->
+      <ul class="menu_items">
+        <li class="item_1">
+          <select class="symbol" required>
+            <option value="" disabled selected hidden>Select a Symbol</option>
+
+          </select>
+        </li>
+        <div class="bg">
+          <li class="item_2">
+            <div class="view_bg">
+              <button class="view_order_btn" onclick="submitTryit(1)"><i class="fa fa-eye"
+                  style="font-size:14px;color:#efefef;"></i>
+                View Order Book
+              </button>
+            </div>
+          </li>
+          <li class="item_3">
+            <div class="place_bg">
+              <a href="" onclick="openMenu()" class="place_order" title="">
+<i class="fa-solid fa-envelope-open-dollar"></i>
+                <i class="fa fa-fw fa-envelope" style="font-size:13px;color:#efefef"></i>
+                Place Order   
+                <i class="fa fa-angle-right" style="margin-left: 60px;"></i>
+              </a>
+            </div>
+            <!-- <i class="fa fa-angle-down"></i> -->
+
+
+          </li>
+        </div>
+      </ul>
+    </div>
+    <div class="empty screen"></div>
+  </div>
 
 
 
