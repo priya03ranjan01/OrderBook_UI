@@ -1,76 +1,198 @@
 * {
+  list-style: none;
+  text-decoration: none;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Arial, Helvetica, sans-serif;
+  font-family: Metropolis,serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
 }
 
 body {
-  background-color: #eeeeee;
- 
+  background-color: #eee;
+  width: 100vw;
+  height: 100vh;
 }
 
-
-
-header.navbar {
+.navbar {
   background-color: #cd1409;
-  width: 100%;
-  height: 10vh;
   border-bottom: 5px solid #ffff00;
   box-shadow: 0 5px 14px 0px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  min-width: 50%;
+  z-index:1;
 }
 
-
-.navbar_items{
-  display: flex;   
+.items {
+  display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
-  vertical-align:center;
+  padding: 15px;
+ 
+  margin: 0px 5px;
+  display: flex;
+  
 
 }
 
-a {
-  text-decoration: none;
+nav ul li {
+  display: inline-block;
 }
 
-    nav ul li{
-      display: inline-block;
-      list-style: none;
-      margin: 0px 10px;
-      background-color: #eeeeee;
-      padding: 5px 20px;
-      border:3px solid #7f7f7f;
-      border-radius:30px;
-    }
+.navbar_left_items ul li {
+  background-color: #eeeeee;
+  padding: 5px 20px;
+  border: 3px solid #7f7f7f;
+  border-radius: 30px;
+  margin: 0px 10px;
+}
 
-    nav ul li a{
-      text-decoration:none;
-      color: #2f2f2f;
-      font-weight:600;
-    }
-    nav ul li:hover,nav ul li:active{
-      border:3px solid #ffff44;
-      background-color: #ffff44;
-    }
+.navbar_left_items ul li a {
+  color: #2f2f2f;
+  font-weight: 600;
+}
 
-    .navbar_right_items{
-      background-color: #ffff44;
-      padding: 5px 10px;
-      vertical-align:center;
+.navbar_left_items ul li:hover,
+.navbar_left_items ul li:active {
+  border: 3px solid #ffff44;
+  background-color: #ffff44;
+  transition: 0.3s ease;
+}
 
-    }
-    
-    .enter_user input{
+.navbar_right_items {
+  margin: 0px 15px;
+  box-shadow: 0 5px 14px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+}
 
-    }
-    .side_menu{
-      background-color:#3f3f3f;
-       height:100vh;
-       max-width:17vw;
-        min-width:15vw
-    }
+.navbar_right_items ul {
+  background-color: #eeeeee;
+  border-radius: 25px;
+  cursor: pointer;
+  height: 27px;
+}
 
-    .empty_screen{
-      background-color:#7f7f7f
-    }
+.enter_user li i {
+  position: relative;
+  bottom: 10px;
+  left: 10px;
+}
+
+.enter_user li input {
+  background-color: #eeeeee;
+  position: relative;
+  padding: 2px;
+  left: 15px;
+  bottom: 18px;
+  border-radius: 30px;
+  width: 120px;
+  border: none;
+  outline: none;
+}
+
+input[type=checkbox] {
+  display: none;
+  
+}
+
+.hamburger {
+  display: none;
+  font-size: 30px;
+  user-select: none;
+}
+
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 600px) {
+  .collapse {
+    display: none;
+    position: absolute;
+    background-color: #eee;
+ 
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding:10px;
+  }
+
+  .collapse li{
+    display:flex;
+    flex-direction: column;
+  }
+
+.navbar_left_items ul li{
+  border:none;
+}
+
+  .collapse li+li {
+    margin-top: 10px;
+  }
+
+  input[type=checkbox]:checked~.collapse {
+    display: block;
+   
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* sidebar */
+.side_menu{
+  background-color:#3f3f3f;
+    position: fixed;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    padding: 10px 0;
+    transition: all 0.5s ease;
+    overflow: hidden
+}
+
+.side_menu li{
+ 
+  border-bottom: 1px solid #5f5f5f;
+  
+
+}
+
+.bg :hover,
+ .bg ul :active{
+      background:#7f7f7f;
+  }
+
+  .item_1 .symbol{
+    width:90%;
+    border-radius: 8px;
+    margin:15px 10px;
+    padding:5px;
+    font-size: medium;
+    background:#eee;
+  }
+  .item_2 button, .item_3 a {
+    width:100%; 
+    text-align: left;
+    color:#efefef;
+    font-size: medium;
+    background-color:#3f3f3f;
+    padding:10px;
+    border:none; 
+    display: block;
+  }
+
+  .place_bg a{
+    position: absolute;
+    border-bottom: 1px solid #5f5f5f;
+  }
+
+  .empty_screen{
+      margin-left: 200px; 
+      padding: 0px 10px;
+  }
+
+  
+  div.place_bg:hover :nth-child(3){
+transform: rotateZ(90deg);
+transition: all 0.4s ease;
+  }
+
