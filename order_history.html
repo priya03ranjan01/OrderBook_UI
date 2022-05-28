@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script>
+    $(function(){
+      $("#b-placeholder").load("navbar.html");
+    });
+    </script>
+  
+  <script src="https://kit.fontawesome.com/4a04772a53.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css" />
+  
+  <title>Order History UI</title>
+
+</head>
+
+<body>
+  <div id="b-placeholder">
+  </div>
+  <div class="container">
+<div class="buttons">
+ <button class="cancel" id ="cancel_all" onclick="">Cancel All</button>
+  <button class="cancel" id="cancel_buys" onclick="">Cancel Buys</button>
+  <button class="cancel" id="cancel_sells" onclick="">Cancel Sells</button>
+</div>
+<div class="history_screen">Order History Screen</div>
+</div>
+<!-- <script src="index.js"></script> -->
+<script>
+  let cancels=document.querySelectorAll('.cancel');
+cancels.forEach(cnl=>{
+  cnl.addEventListener('click', e=> {
+    if (confirm("Click OK to confirm cancellation.")){
+      alert("Order cancelled.")
+    }
+})});
+    </script>
+
+</body>
+</html>
